@@ -1,8 +1,7 @@
 name: Bump
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  push:
     branches:
       - master
 
