@@ -1,0 +1,16 @@
+name: Bump
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update
+        uses: tyrrrz/action-http-request@v1
+        with:
+          url: ${{ secrets.UPDATE_HOOK_SECRET }}
